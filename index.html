@@ -382,7 +382,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">1.4k字</span>
+        <span class="post-count">1.3k字</span>
       </span>
     </span>
 
@@ -407,7 +407,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="算法笔记"><a href="#算法笔记" class="headerlink" title="算法笔记"></a>算法笔记</h1><h2 id="第一章-算法简介"><a href="#第一章-算法简介" class="headerlink" title="第一章 算法简介"></a>第一章 算法简介</h2><h3 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h3><p>​        输入有序的元素列表，若查找的元素在其中，则返回其位置，否则返回null。</p>
+        <h1 id="算法笔记"><a href="#算法笔记" class="headerlink" title="算法笔记"></a>算法笔记</h1><h2 id="第一章-简单介绍"><a href="#第一章-简单介绍" class="headerlink" title="第一章 简单介绍"></a>第一章 简单介绍</h2><p>算法在现在面试中的地位，懂得都懂~好好学习算法才有机会冲刺大厂。</p>
+<p>都研二了。。。。第一次学习算法，争取入门~记录自己平时看书、刷题做下的笔记~~~以后复习巩固用，也希望能帮到大家。只会用<strong>python</strong>，因此我的笔记也全是用python写的算法。</p>
+<hr>
+<p>这一节主要介绍算法中常用的数据结构。</p>
+<p><strong>以一个简单的算法引入</strong></p>
+<h3 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h3><p>​        输入有序的元素列表，若查找的元素在其中，则返回其位置，否则返回null。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#代码演示，设有一个列表a=[1,2,4,7,9,13,46,38,400],查找13是否在其中</span></span><br><span class="line">a=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">9</span>,<span class="number">13</span>,<span class="number">33</span>,<span class="number">34</span>,<span class="number">111</span>,<span class="number">400</span>]</span><br><span class="line">low=<span class="number">0</span></span><br><span class="line">high=<span class="built_in">len</span>(a)-<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">search_num</span>(<span class="params">num</span>):</span></span><br><span class="line">    <span class="keyword">global</span> low,high</span><br><span class="line">    mid_num = a[<span class="built_in">int</span>((low + high) / <span class="number">2</span>)]</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> num &gt; mid_num:</span><br><span class="line">        low = <span class="built_in">int</span>((low + high) / <span class="number">2</span>) + <span class="number">1</span></span><br><span class="line">        search_num( num)</span><br><span class="line">    <span class="keyword">elif</span> num &lt; mid_num:</span><br><span class="line">        high = <span class="built_in">int</span>((low + high) / <span class="number">2</span>) - <span class="number">1</span></span><br><span class="line">        search_num(num)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&#x27;其序号是<span class="subst">&#123;<span class="built_in">int</span>((high+low)/<span class="number">2</span>)&#125;</span>&#x27;</span>)</span><br></pre></td></tr></table></figure>
         
           <a class="article-more-a" href="/2021/08/10/1-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/#more">more >></a>
